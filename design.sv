@@ -17,3 +17,24 @@ module ARM_CPU(
     output reg [63:0] PC
 );
 
+reg [4:0] tempRegNum1;
+reg [4:0] tempRegNum2;
+reg [10:0] tempInstruction;
+
+reg CONTROL_MEM2REG;
+reg CONTROL_ALUSRC;
+reg CONTROL_UNCON_BRANCH;
+reg [1:0] CONTROL_ALU_OP;
+
+wire tempALUZero;
+wire [3:0] tempALUControl;
+wire [63:0] tempALUInput2;
+wire [63:0] tempImmediate;
+wire [63:0] tempShiftedImmediate;
+
+wire [63:0] nextnextPC;
+reg CONTROL_JUMP;
+wire [63:0] nextPC;
+wire nextPCZero;
+reg tempBranchZero;
+
