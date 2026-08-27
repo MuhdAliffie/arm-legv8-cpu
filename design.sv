@@ -38,3 +38,5 @@ wire [63:0] nextPC;
 wire nextPCZero;
 reg tempBranchZero;
 
+/* Multiplexer for the Program Counter */
+PCMux mux1(nextPC, shiftPC, CONTROL_JUMP, nextnextPC);
